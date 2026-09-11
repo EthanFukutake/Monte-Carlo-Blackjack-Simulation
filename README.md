@@ -1,22 +1,23 @@
 This project simulates 1,000,000 rounds of blackjack using basic strategy for both card counting and non card counting hands. The purpose is to determine if there is actually an advantage to card counting in casinos and if so to calculate the advantage for the player with card counting. Just like typical blackjack tables found in most casinos, a blackjack pays 3:2. There are 6 decks to a shoe and the shoe will be reshuffled when there are less than 75 cards left similar to real life blackjack where shoes are reshuffled when there are 1-2 decks left.
 
-blackjack_terminal.py:
+**blackjack_terminal.py:**
 This is the backbone for the whole project. This is a terminal blackjack game where the user can manually place bets and play a game a blackjack such as hitting, standing, splitting, and doubling.
 
-blackjack_simulation.py:
+**blackjack_simulation.py:**
 This takes the original blackjack_terminal file and simulates 1,000,000 rounds of blackjack with a starting bankroll of $10,000,000 and standard bet of $50 per hand. This implements basic strategy based on many blackjack strategy cards found online. 
 
-blackjack_simulation_card_counting.py:
+**blackjack_simulation_card_counting.py:**
 This takes the previous blackjack_simulation.py file and adds a hi-lo system for card counting allowing the program to adjust their bet depending on the running count. A higher running count means a higher bet would be placed where a lower running count would be the minimum bet would be placed which is 50. 
 
 Based on the findings of this simulation, card counting will have around a 1.0-1.5% advantage over non card counting. These findings are typical to the actual statistics of real life card counting.
 
-
+---
 
 # SAMPLE OUTPUTS (numbers will vary due to randomness of shuffling the shoe)
 
-blackjack_simulation.py:
+**blackjack_simulation.py:**
 
+```
 Simulating 1,000,000 rounds...
 
        CHECKPOINTS       
@@ -47,9 +48,6 @@ Profit/Loss: $-204075
 ROI: -0.41%
 
 Time elapsed: 7.98 seconds
-
-
-blackjack_simulation_card_counting.py:
 
 Simulating 1,000,000 rounds...
 
@@ -82,7 +80,10 @@ ROI: 0.69%
 
 Time elapsed: 8.39 seconds
 
-Setup: 
+```
+Setup
+
+```
 python -m venv .venv
 
 # Windows
