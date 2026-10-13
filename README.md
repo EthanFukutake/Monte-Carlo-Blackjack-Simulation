@@ -9,7 +9,10 @@ This takes the original blackjack_terminal file and simulates 1,000,000 rounds o
 **blackjack_simulation_card_counting.py:**
 This takes the previous blackjack_simulation.py file and adds a hi-lo system for card counting allowing the program to adjust their bet depending on the running count. A higher running count means a higher bet would be placed where a lower running count would be the minimum bet would be placed which is 50. 
 
-Based on the findings of this simulation, card counting will have around a 1.0-1.5% advantage over non card counting. These findings are typical to the actual statistics of real life card counting.
+blackjack_strategy_analysis.pbix:
+This is a Power BI dashboard that containts various charts and graphs comparing the results of Basic Strategy vs. Hi-Lo card counting.
+
+Based on the findings of this simulation, card counting will have around a 1.0-1.5% advantage over non card counting. These findings are typical to the actual statistics of real life card counting. No matter if you do basic strategy or Card counting, the win/loss/push percentages will always be around 43.5/48/8.5. Its whether you adjust your bet depending on the count that causes players to profit from playing blackjack.
 
 ---
 

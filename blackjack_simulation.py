@@ -323,6 +323,7 @@ def run_simulation(num_rounds, bet_amount=50, starting_money=10000000, checkpoin
         "final_money": money,
         "profit": money - starting_money,
         "roi": ((money - starting_money) / (total_rounds * bet_amount)) * 100,
+        "df_rounds": df_rounds,
         "df_checkpoints": df_checkpoints
     }
 
@@ -333,6 +334,10 @@ if __name__ == "__main__":
     print("Simulating 1,000,000 rounds...")
     start_time = time.time()
     stats = run_simulation(1000000, bet_amount=50, checkpoint_interval=100000)
+
+    stats["df_rounds"].assign(strategy="Basic Strategy").to_csv("blackjack_basic_rounds.csv", index=False)
+    stats["df_checkpoints"].assign(strategy="Basic Strategy").to_csv("blackjack_basic_checkpoints.csv", index=False)
+
     elapsed = time.time() - start_time
 
     print(f"\n       CHECKPOINTS       ")
